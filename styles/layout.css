@@ -1,43 +1,46 @@
 section, header, article, nav {
-    isplay: block;
+    display: block;
 }
 
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
 }
 
 body {
+    max-width: 80em;
     margin: 1em 10%;
+
     background-image: url(../images/background.gif);
+    background-repeat: repeat-x;
     background-attachment: fixed;
     background-position: top left;
-    background-repeat: repeat-x;
-    max-width: 80em;
 }
 header {
+    border-width: .1em;
+    border-style: solid;
+    border-bottom-width: 0;
     background-image: url(../images/pgbg.png);
     background-repeat: no-repeat;
     background-position: bottom right;
-    border-width: .1em;
-    border-style: solid;
-    border-bottom-width: 0;
-
     /*height: 330px;*/
 }
 header nav {
-    background-image: url(../images/navbar.gif);
-    background-position: bottom left;
-    background-repeat: repeat-x;
+    padding-left: 10%;
+
     border-width: .1em;
     border-style: solid;
-    border-bottom-width: 0;
     border-top-width: 0;
-    padding-left: 10%;
+    border-bottom-width: 0;
+    background-image: url(../images/navbar.gif);
+    background-repeat: repeat-x;
+    background-position: bottom left;
 }
 header nav ul {
-    width: 100%;
     overflow: hidden;
+
+    width: 100%;
+
     border-left-width: .1em;
     border-left-style: solid;
 }
@@ -47,16 +50,22 @@ header nav li {
 header nav li a {
     display: block;
     float: left;
+
     padding: .5em 2em;
+
     border-right: .1em solid;
 }
 
 article {
+    line-height: 1.8em;
+
+    padding: 2em 10%;
+
+    text-indent: 25px;
+
     border-width: .1em;
     border-style: solid;
     border-top-width: 0;
-    padding: 2em 10%;
-    line-height: 1.8em;
 }
 article img {
     border-width: .1em;
@@ -79,22 +88,26 @@ article img {
 }
 
 #slideshow {
+    position: relative;
+
+    overflow: hidden;
+
     width: 150px;
     height: 150px;
-    position: relative;
-    overflow: hidden;
 }
 #preview {
     position: absolute;
+
     border-width: 0;
     outline-width: 0;
 }
 
 #frame {
     position: absolute;
+    z-index: 99;
     top: 0;
     left: 0;
-    z-index: 99;
+
     border-width: 0;
     outline-width: 0;
 }
